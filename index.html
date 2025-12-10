@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Игра "Угадай число" и заказ такси</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        .form-block {
+            margin-top: 38px;
+            padding: 24px;
+            background: #ffffff;
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        button {
+            width: 320px;
+            padding: 7px;
+            margin-bottom: 4px;
+            border-radius: 5px;
+            border: 1px solid #bbb;
+            font-size: 1em;
+        }
+
+        button {
+            width: auto;
+            background: #2d26f8;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background: #221db4;
+            transform: scale(1.05);
+        }
+
+        .error {
+            color: red;
+            font-size: 0.98em;
+        }
+
+        #productResult {
+            margin-top: 20px;
+            font-weight: bold;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Игра "Угадай число"</h1>
+    <p>Угадай случайное число! У тебя есть 5 попыток.</p>
+    <button onclick="startGame()">Начать игру</button>
+
+    <div class="form-block">
+        <h2 id="taxiHeader">Заказать такси</h2>
+        <form id="productForm" novalidate>
+            <label for="name">Имя</label>
+            <input id="name" type="text" />
+            <div id="nameError" class="error"></div>
+
+            <label for="email">E-mail</label>
+            <input id="email" type="text" />
+            <div id="emailError" class="error"></div>
+
+            <label for="phone">Телефон</label>
+            <input id="phone" type="text" placeholder="8XXXXXXXXXX" maxlength="11" />
+            <div id="phoneError" class="error"></div>
+
+            <label for="product">Класс такси</label>
+            <select id="product">
+                <option value="">Выберите класс такси</option>
+                <option value="Такси Стандарт">Стандарт</option>
+                <option value="Такси Комфорт">Комфорт</option>
+                <option value="Такси Бизнес">Бизнес</option>
+            </select>
+            <div id="productError" class="error"></div>
+
+            <label for="quantity">Количество пассажиров (от 1 до 5)</label>
+            <select id="quantity">
+                <option value="">Выберите количество</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <div id="quantityError" class="error"></div>
+
+
+            <button id="productSubmit" type="submit">Заказать</button>
+        </form>
+        <div id="productResult"></div>
+    </div>
+
+    <div class="form-block">
+    <h2>Заказ обратного звонка</h2>
+    <form id="callbackForm">
+        <label for="cname">Имя</label>
+        <input id="cname" name="cname" type="text" required minlength="2" maxlength="30" pattern="^[А-Яа-яЁёA-Za-z]+$" />
+
+        <label for="cemail">E-mail</label>
+        <input id="cemail" name="cemail" type="email" required />
+
+        <label for="ctel">Телефон</label>
+        <input id="ctel" name="ctel" type="tel" required pattern="^\d{11}$" placeholder="8XXXXXXXXXX" />
+
+        <label for="ctime">Время для звонка</label>
+        <select id="ctime" name="ctime" required>
+            <option value="">Выберите время</option>
+            <option value="Утро">Утро</option>
+            <option value="День">День</option>
+            <option value="Вечер">Вечер</option>
+        </select>
+        <button type="submit">Отправить заявку</button>
+    </form>
+</div>
+
+
+    <script src="game.js"></script>
+</body>
+
+</html>
