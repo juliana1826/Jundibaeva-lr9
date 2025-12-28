@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кофе с Капи</title>
+
+    <!-- шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- хедер -->
+    <header>
+        <nav>
+            <a href="#hero" class="logo">
+                <img src="img/logo-kapi-round.png" alt="Капибара">
+                <span>Кофе с Капи</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">О нас</a></li>
+                <li><a href="#assortment" class="nav-link">Ассортимент</a></li>
+                <li><a href="#moments" class="nav-link">Живые моменты</a></li>
+                <li><a href="#events" class="nav-link">Мероприятия</a></li>
+                <li><a href="#merch" class="nav-link">Мерч</a></li>
+                <li><a href="#capy-info" class="nav-link">О капибарах</a></li>
+                <li><a href="#booking" class="nav-link">Бронь</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- главная -->
+    <section id="hero" class="animate-on-scroll hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <h1>КОФЕ С КАПИ</h1>
+                <p>«Кофе с Капи» — уютное место, где вкус кофе сочетается с теплом, заботой и вдохновением на добрые дела.</p>
+                <a href="#booking" class="cta-button">Забронировать столик</a>
+            </div>
+            <div class="hero-image">
+                <img src="img/hero.png" alt="Интерьер кофейни">
+            </div>
+        </div>
+    </section>
+
+    <!-- немного о нас -->
+    <section id="about" class="animate-on-scroll">
+        <h2 class="section-title">Немного о нас</h2>
+
+        <div class="about-grid">
+            <!-- 1 ряд -->
+            <article class="about-card">
+                <h3>История кафе</h3>
+                <p>«Кофе с Капи» — кафе, вдохновлённое путешествиями, Южной Америкой, кофе и капибарами.</p>
+            </article>
+
+            <article class="about-card about-icon no-border">
+                <img src="img/coffee.png" alt="Кружка кофе">
+            </article>
+
+            <article class="about-card">
+                <h3>Меню и вкус</h3>
+                <p>Экзотические блюда, бразильские специи и лучший кофе. Проводим кофейные дегустации.</p>
+            </article>
+
+            <article class="about-card">
+                <h3>Атмосфера путешествий</h3>
+                <p>Делимся историями и впечатлениями от поездок. Есть уголок с фото и сувенирами из поездок.</p>
+            </article>
+
+            <!-- 2 ряд -->
+            <div class="about-empty"></div>
+
+            <article class="about-card">
+                <h3>Забота о капибарах</h3>
+                <p>В кафе нет живых животных. Зато 5% с покупок и взносы гостей идут в фонды защиты капибар.</p>
+            </article>
+
+            <div class="about-empty"></div>
+
+            <div class="about-card about-photo">
+                <img src="img/about-kapi.png" alt="Капибары">
+            </div>
+        </div>
+    </section>
+
+    <!-- ассортимент -->
+    <section id="assortment" class="animate-on-scroll">
+        <h2 class="section-title">Ассортимент</h2>
+
+        <div class="assortment-tabs">
+            <button class="tab active">Кофе</button>
+        </div>
+
+        <div class="products-grid">
+            <article class="product-card">
+                <img src="img/cup-espresso.png" alt="Эспрессо" class="product-icon">
+                <h3>Эспрессо</h3>
+                <p class="product-desc">Небольшое количество концентрированного черного кофе</p>
+                <div class="price">30 мл. | 100 руб.</div>
+            </article>
+            <article class="product-card">
+                <img src="img/cup-cappuccino.png" alt="Капучино" class="product-icon">
+                <h3>Капучино</h3>
+                <p class="product-desc">Эспрессо с горячим молоком и взбитой молочной пенкой</p>
+                <div class="price">150 мл. | 200 руб.</div>
+            </article>
+            <article class="product-card">
+                <img src="img/cup-latte.png" alt="Латте" class="product-icon">
+                <h3>Латте</h3>
+                <p class="product-desc">Эспрессо с горячим молоком и тройной взбитой молочной пенкой</p>
+                <div class="price">250 мл. | 200 руб.</div>
+            </article>
+            <article class="product-card">
+                <img src="img/cup-filter.png" alt="Фильтр" class="product-icon">
+                <h3>Фильтр</h3>
+                <p class="product-desc">Большое количество эспрессо с несколькими кубиками льда</p>
+                <div class="price">200 мл. | 180 руб.</div>
+            </article>
+        </div>
+    </section>
+
+    <!-- живые моменты -->
+    <section id="moments" class="animate-on-scroll">
+        <h2 class="section-title">Живые моменты</h2>
+        <div class="moments-grid">
+            <figure class="moment">
+                <img src="img/moment-1.png" alt="Кофе и десерты">
+            </figure>
+            <figure class="moment">
+                <img src="img/moment-2.png" alt="Печенье и кофе">
+                <figcaption>Домашняя выпечка и уютные вечера.</figcaption>
+            </figure>
+            <figure class="moment">
+                <img src="img/moment-3.png" alt="Кофе и растения">
+                <figcaption>Маленькие детали, из которых складывается настроение.</figcaption>
+            </figure>
+            <figure class="moment">
+                <img src="img/moment-4.png" alt="Круассан и кофе">
+                <figcaption>Утренний кофе с круассаном и тихой музыкой.</figcaption>
+            </figure>
+            <figure class="moment">
+                <img src="img/moment-5.png" alt="Капибара у воды">
+            </figure>
+        </div>
+        <div class="cta-wrapper">
+            <a href="#booking" class="cta-button">Забронировать столик</a>
+        </div>
+    </section>
+
+    <!-- уютные мероприятия -->
+    <section id="events" class="animate-on-scroll">
+        <h2 class="section-title">Уютные мероприятия</h2>
+        <div class="events-grid">
+            <article class="event-card">
+                <img src="img/event-music.png" alt="Вечер с живой музыкой">
+                <div class="event-body">
+                    <h3>Вечер с живой музыкой</h3>
+                    <p>Приглашаем всех на наш уютный вечерний концерт акустической музыки.</p>
+                    <p class="event-meta">4.11 в 18:00</p>
+                </div>
+            </article>
+            <article class="event-card">
+                <img src="img/event-games.png" alt="Настольные игры">
+                <div class="event-body">
+                    <h3>Настольные игры</h3>
+                    <p>Приходите поиграть в настолки и познакомиться с новыми людьми в нашем сообществе любителей капибар.</p>
+                    <p class="event-meta">Каждую среду</p>
+                </div>
+            </article>
+            <article class="event-card">
+                <img src="img/event-tasting.png" alt="Дегустационный вечер">
+                <div class="event-body">
+                    <h3>Дегустационный вечер</h3>
+                    <p>Будем пробовать кофе, приготовленный из разных сортов и учиться разбираться в них. Наши прекрасные бариста и декаф помогут вам погрузиться в мир кофе и больше узнать про этот прекрасный напиток. </p>
+                    <p class="event-meta">8.11 с 14:00 до 18:00</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- мерч с капи -->
+    <section id="merch" class="animate-on-scroll">
+        <h2 class="section-title">Мерч с Капи</h2>
+
+        <div class="merch-grid">
+            <article class="merch-card">
+                <img src="img/merch-tshirt-1.png" alt="Футболка Капи">
+                <h3>Футболка «Капики»</h3>
+                <div class="price">хлопок | 1000 руб.</div>
+            </article>
+
+            <article class="merch-card">
+                <img src="img/merch-bag.png" alt="Шопер Капи">
+                <h3>Шопgер «Капиrb»</h3>
+                <div class="price">лён | 1500 руб.</div>
+            </article>
+
+            <article class="merch-card">
+                <img src="img/merch-tshirt-2.png" alt="Футболка Капи мини">
+                <h3>Футболка «Капи»</h3>
+                <div class="price">хлопок | 1000 руб.</div>
+            </article>
+
+            <article class="merch-card">
+                <img src="img/merch-cup.png" alt="Кружка Капи">
+                <h3>Кружка «Капи»</h3>
+                <div class="price">керам. | 1500 руб.</div>
+            </article>
+        </div>
+    </section>
+
+    <!-- интересное о капибарах -->
+    <section id="capy-info" class="animate-on-scroll">
+        <h2 class="section-title">Интересное о капибарах</h2>
+        <div class="capy-layout">
+            <div class="capy-photo">
+                <img src="img/capy-main.png" alt="Капибара на траве">
+            </div>
+            <div class="capy-text">
+                <p>Капибары - удивительно дружелюбные и общительные создания.
+                <p>Они живут большими семьями, обнимаются, спят друг на друге всегда держатся вместе.</p>
+                <p>Их часто называют «водяными свинками» - на лапках у них есть перепонки, поэтому они прекрасно плавают.</p>
+                <p>В Японии, в парке Izu Shaboten, для капибар даже создали тёплый онсэн с лимонами и мандаринами — место для спокойствия
+                и удовольствия. Эти умные грызуны общаются целым языком звуков — от тихого щебета до весёлого свиста.</p>
+            </div>
+        </div>
+        <div class="cta-wrapper">
+            <a href="#booking" class="cta-button">Забронировать столик</a>
+        </div>
+    </section>
+
+    <!-- забронировать столик -->
+    <section id="booking" class="animate-on-scroll">
+        <h2 class="section-title">Забронируйте столик</h2>
+        <div class="booking-wrapper">
+            <form id="orderForm" class="order-form">
+                <div class="form-group">
+                    <label for="orderName">Имя *</label>
+                    <input type="text" id="orderName" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderPhone">Телефон *</label>
+                    <input type="tel" id="orderPhone" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderDate">Дата визита *</label>
+                    <input type="date" id="orderDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderTime">Время *</label>
+                    <input type="time" id="orderTime" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderPeople">Количество людей *</label>
+                    <input type="number" id="orderPeople" min="1" max="10" required>
+                </div>
+                <div class="form-group">
+                    <label for="orderExtra">Пожелания</label>
+                    <textarea id="orderExtra" rows="3" placeholder="Например: место у окна, без сахара..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Забронировать</button>
+                <div id="orderMessage" class="form-message"></div>
+            </form>
+
+            <form id="contactForm" class="order-form">
+                <h3 class="small-title">Остались вопросы?</h3>
+                <div class="form-group">
+                    <label for="contactName">Имя *</label>
+                    <input type="text" id="contactName" required minlength="2">
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email *</label>
+                    <input type="email" id="contactEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">Сообщение *</label>
+                    <textarea id="contactMessage" rows="4" required minlength="10"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Отправить</button>
+                <div id="contactMessageResult" class="form-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- футер -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-logo">
+                <img src="img/logo-kapi-footer.png" alt="Кофе с Капи">
+            </div>
+            <div class="footer-links">
+                <a href="#assortment">Ассортимент</a>
+                <a href="#events">Мероприятия</a>
+                <a href="#booking">Бронь</a>
+            </div>
+            <div class="footer-meta">
+                <span>ул. Ленина, 25, Екатеринбург</span>
+                <span>+7 (343) 123-45-67</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
